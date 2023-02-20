@@ -6,4 +6,14 @@ class TypeAheadDataGroup<T> {
     required this.title,
     required this.items,
   });
+  
+  TypeAheadDataGroup copyWith({
+    String? title,
+    List<T>? items,
+  }) {
+    return TypeAheadDataGroup(
+      title: title ?? this.title,
+      items: items ?? this.items,
+    );
+  }
 }
